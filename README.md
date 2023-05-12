@@ -1,1 +1,5 @@
 # CryptoClustering
+
+In this repository we take in generated data for given cryptocurrencies and perform two different clusterings to see the different effects of preprocessing our dataset. We begin by simply scaling our data with the StandardScaler and performing an elbow analysis to find the optimal clusters (k=4). We then perform our first KMeans clustering on our scaled dataset. Observing these clusters in a scatter plot, we can see that the clusters have a fair amount of dispersal between members. There are also two outlier clusters with only one single data point each, but one of these outliers is actually located within a larger cluster.
+
+Next, we optimize our clusters by performing a Principal Component Analysis set with n_components=3. This yields a total explained variance of 0.89503166, which is fairly close to 1.0 and thus satisfactory for our purposes. After performing a second elbow analysis, we again find the optimal number of clusters is 4. Now performing a second KMeans clustering on our PCA data, we can see that our new clusters are much more tightly formed, and the outlier clusters are now located further away from the other data points.
